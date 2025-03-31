@@ -67,7 +67,7 @@ v0 = 20  # Initial velocity in m/s
 g = 9.81 # Gravity in m/s^2
 projectile_range(v0, g)
 ```
-.
+
 
 
 
