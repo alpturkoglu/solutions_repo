@@ -262,35 +262,6 @@ projectile_range(v0, g)
 </ul>
 <h3 id="conclusion"><strong>Conclusion</strong></h3>
 <p>This analysis demonstrates the relationship between launch angle and range, emphasizing its significance in various real-world applications. Future studies can incorporate drag forces for more realistic modeling.</p>
-<h1 id="bullet-trajectory-simulation-examples">Bullet Trajectory Simulation Examples</h1>
-<p>This document contains different examples of bullet trajectory simulations, implemented in Python and JavaScript. Each example demonstrates how bullets move through the air, considering factors like gravity and air resistance.</p>
-<hr/>
-<h2 id="1-bullet-trajectory-simulation-python-with-matplotlib">1. Bullet Trajectory Simulation (Python with <code>matplotlib</code>)</h2>
-<p>This Python example simulates the trajectory of a bullet shot at an angle, considering gravity and no air resistance.</p>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="initial-parameters">Initial parameters</h1>
-<p>initial_velocity = 100  # m/s
-angle = 45  # degrees
-g = 9.81  # gravity acceleration (m/s^2)</p>
-<h1 id="convert-angle-to-radians">Convert angle to radians</h1>
-<p>theta = np.radians(angle)</p>
-<h1 id="calculate-the-time-of-flight">Calculate the time of flight</h1>
-<p>time_of_flight = 2 * initial_velocity * np.sin(theta) / g</p>
-<h1 id="time-intervals">Time intervals</h1>
-<p>t = np.linspace(0, time_of_flight, num=500)</p>
-<h1 id="x-and-y-positions-of-the-bullet">X and Y positions of the bullet</h1>
-<p>x = initial_velocity * np.cos(theta) * t
-y = initial_velocity * np.sin(theta) * t - 0.5 * g * t**2</p>
-<h1 id="plotting-the-trajectory">Plotting the trajectory</h1>
-<p>plt.figure(figsize=(10, 6))
-plt.plot(x, y)
-plt.title("Bullet Trajectory (Without Air Resistance)")
-plt.xlabel("Distance (m)")
-plt.ylabel("Height (m)")
-plt.grid(True)
-plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
