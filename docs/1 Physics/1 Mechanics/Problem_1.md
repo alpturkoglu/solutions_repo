@@ -4,7 +4,7 @@
 ### **1. Theoretical Foundation**
 Projectile motion is governed by Newton’s laws. Assuming no air resistance, the motion can be described using kinematic equations:
 
-- Horizontal motion:
+- Horizontal motion :
 
 $$
 x = v_0 \cos(\theta) t
