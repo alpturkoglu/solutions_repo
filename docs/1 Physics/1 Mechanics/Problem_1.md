@@ -11,7 +11,9 @@ x = v_0 \cos(\theta) t
 $$
 
 - Vertical motion:
-  \[ y = v_0 \sin(\theta) t - \frac{1}{2} g t^2 \]
+$$
+ y = v_0 \sin(\theta) t - \frac{1}{2} g t^2 
+ $$
 
 The total time of flight is found by solving for when the projectile returns to its initial height:
 
@@ -20,7 +22,10 @@ $$
  $$
 The horizontal range is given by:
 
-\[ R = \frac{v_0^2 \sin(2\theta)}{g} \]
+$$
+ R = \frac{v_0^2 \sin(2\theta)}{g} 
+ $$
+
 
 ### **2. Analysis of the Range**
 The horizontal range depends on:
@@ -65,7 +70,7 @@ projectile_range(v0, g)
 
 
 
-![alt text](image-4.png)
+
 
 ### **5. Discussion on Limitations**
 - **Air Resistance:** In real scenarios, drag significantly reduces range.
@@ -74,3 +79,44 @@ projectile_range(v0, g)
 
 ### **Conclusion**
 This analysis demonstrates the relationship between launch angle and range, emphasizing its significance in various real-world applications. Future studies can incorporate drag forces for more realistic modeling.
+
+# Bullet Trajectory Simulation Examples
+
+This document contains different examples of bullet trajectory simulations, implemented in Python and JavaScript. Each example demonstrates how bullets move through the air, considering factors like gravity and air resistance.
+
+---
+
+## 1. Bullet Trajectory Simulation (Python with `matplotlib`)
+
+This Python example simulates the trajectory of a bullet shot at an angle, considering gravity and no air resistance.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Initial parameters
+initial_velocity = 100  # m/s
+angle = 45  # degrees
+g = 9.81  # gravity acceleration (m/s^2)
+
+# Convert angle to radians
+theta = np.radians(angle)
+
+# Calculate the time of flight
+time_of_flight = 2 * initial_velocity * np.sin(theta) / g
+
+# Time intervals
+t = np.linspace(0, time_of_flight, num=500)
+
+# X and Y positions of the bullet
+x = initial_velocity * np.cos(theta) * t
+y = initial_velocity * np.sin(theta) * t - 0.5 * g * t**2
+
+# Plotting the trajectory
+plt.figure(figsize=(10, 6))
+plt.plot(x, y)
+plt.title("Bullet Trajectory (Without Air Resistance)")
+plt.xlabel("Distance (m)")
+plt.ylabel("Height (m)")
+plt.grid(True)
+plt.show()
