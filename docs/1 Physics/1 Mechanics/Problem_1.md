@@ -20,6 +20,7 @@ The total time of flight is found by solving for when the projectile returns to 
 $$
  t_f = \frac{2 v_0 \sin(\theta)}{g} 
  $$
+ 
 The horizontal range is given by:
 
 $$
