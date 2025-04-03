@@ -82,3 +82,4 @@ projectile_range(v0, g)
 ### **Conclusion**
 This analysis demonstrates the relationship between launch angle and range, emphasizing its significance in various real-world applications. Future studies can incorporate drag forces for more realistic modeling.
 
+![alt text](image-2.png)
